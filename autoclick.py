@@ -1,0 +1,18 @@
+import pyautogui
+import time
+time.sleep(5)
+im = pyautogui.screenshot()
+im.save('C:\\Users\\user\\Desktop\\001f.png')
+button7location = pyautogui.locateOnScreen('C:\\Users\\user\\Desktop\\001.png', grayscale=True)
+button7x, button7y = pyautogui.center(button7location)
+pyautogui.click(button7x+100, button7y+15)
+time.sleep(5)
+im = pyautogui.screenshot()
+im.save('C:\\Users\\user\\Desktop\\002f.png')
+button8location = pyautogui.locateOnScreen('C:\\Users\\user\\Desktop\\002.png', grayscale=True)
+button8x, button8y = pyautogui.center(button8location)
+pyautogui.click(button8x, button8y)
+pyautogui.click(button8x, button8y+10)
+time.sleep(5)
+pyautogui.typewrite('psw  ', interval=0.25)
+pyautogui.press('enter')
